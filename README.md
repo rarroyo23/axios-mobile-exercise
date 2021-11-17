@@ -12,7 +12,7 @@ Using Axios' own public API, build a mobile view that lists the latest 20 storie
 2. Use React Native and rebuild the mocks in the PDF wireframe in CSS and JS.
 3. First make a call to the stream endpoint to retrieve an array of the 20 lastest story ids for Axios.com.
 4. For each story id, make another call to the content endpoint to retrieve the data for each story.
-5. For each story in the list view, display the following:
+5. For each story in the listicle view, display the following:
 - The `headline` of the story.
 - The `primary_image` of the story.
 6. For each list item, link to a separate view that shows the full story and display the following:
@@ -31,7 +31,7 @@ Bonus:
 ### Stream endpoint
 https://api.axios.com/api/render/stream/content
 
-This returns by default the UUIDs of about 10 stories, but the page size can be changed.
+This returns by default the UUIDs of about 10 stories, but the page size can be altered.
 
 ### Content endpoint
 https://api.axios.com/api/render/content/c13dbda5-893d-46ba-ae6a-87ff8e34c74e
@@ -47,7 +47,7 @@ We care about accessibility. Please make your page as accessible as possible.
 
 Building software is a collaborative process, so if you're feeling adventurous, feel free to diverge from the designs somewhat and apply your own creativity. Let us know about the choices you made, and why.
 
-The application has Jest already set up. Add the amount of test coverage you feel is appropriate.
+We like to us Jest already here for our unit tests. Add the amount of test coverage you feel is appropriate.
 
 We use TypeScript at Axios. Bonus points if you define types and use them effectively to increase the reliability of your code.
 
