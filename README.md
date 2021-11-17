@@ -1,11 +1,11 @@
 # Axios Mobile Excerise
-Axios has a lot of award-winning journalism, and sometimes it doesn't all fit on one page, so we have to help readers easily find and read the stories they want. Your challenge is to build an interface for an app that displays various stories.
+Axios has a lot of award-winning journalism, and sometimes it doesn't all fit on one page, so we have to help readers easily find and read the stories they want. Your challenge is to build an list interface for an app that displays various stories.
 
 ## Before you start
 We're not trying to get you to work for us for free, so please don't spend than more than 4 hours on this. You can write a `TODO` doc that explains how you'd complete any tasks you don't get to.
 
 ## What You're Building
-Using Axios' own public API, build a mobile app that lists the latest 20 stories.
+Using Axios' own public API, build a mobile app interface that lists the latest 20 stories.
 
 The application should have the following features:
 
@@ -17,20 +17,25 @@ The `section label` of the story.
 The `primary_image` of the story.
 The `published date` of the story.
 
-## How to build it
-We’d like you to use React Native but beyond that:
-
-- Use whatever method of styling your app you prefer
-- Use whatever flavor of JavaScript you like
-
-We love open source, but please do not include any helper libraries for The Movie Database - we’re trying to understand how you work with APIs. Other libraries for data fetching, state management, routing etc. are just fine. However, you are not required to use any additional open source libraries if you don’t need or want them.
+## Getting started
+1. Fork this repo to begin the exercise.
+2. Use React Native and rebuild the mocks in the Figma design in CSS and JS.
+3. First make a call to the stream endpoint to retrieve an array of the 20 lastest story ids for Axios.com.
+4. For each story id, make another call to the content endpoint to retrieve the data for each story.
+5. For each story in the list view, display the following:
+- The headline of the story.
+- The display name of the author.
+- The section label of the story.
+- The primary_image of the story.
+- The published date of the story.
+- Link out the cover image and Go Deeper using the permalink returned by the API.
 
 ## API Details
 
 ### Stream endpoint
 https://api.axios.com/api/render/stream/content
 
-This returns the UUIDs of about 10 stories, but the page size can be changed.
+This returns by default the UUIDs of about 10 stories, but the page size can be changed.
 
 ### Content endpoint
 https://api.axios.com/api/render/content/c13dbda5-893d-46ba-ae6a-87ff8e34c74e
