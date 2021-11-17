@@ -21,8 +21,9 @@ Using Axios' own public API, build a mobile view that lists the latest 20 storie
 - The `section label` of the story.
 - The `primary_image` of the story.
 - The `published date` of the story.
-- The `body text` of the story. Note we store our body text as [DraftJS](https://draftjs.org). At a minimum, return the body as text, and for a bonus, parse out the DraftJS to render the body text with HTML markup.
-Bonus:
+- The `body text` of the story. Note we store our body text as [DraftJS](https://draftjs.org). At a minimum, return the body as text.
+### Bonus:
+- Parse out the DraftJS to render the body text with HTML markup.
 - Link out to Axios.com from the story view.
 - Link back to the listicle view from the full story view.
 
