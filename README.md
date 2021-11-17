@@ -1,5 +1,5 @@
 # Axios Mobile Excerise
-Axios has a lot of award-winning journalism, and sometimes it doesn't all fit on one page, so we have to help readers easily find and read the stories they want. Your challenge is to build a mobile listicle view that displays various stories and links out to the full view of the story.
+Axios has a lot of award-winning journalism, and sometimes it doesn't all fit on one page, so we have to help readers easily find and read the stories they want. Your challenge is to build a mobile listicle view that displays various stories and navigates to the full view of the story.
 
 ## Before you start
 We're not trying to get you to work for us for free, so please don't spend than more than 4 hours on this. You can write a `TODO` doc that explains how you'd complete any tasks you don't get to.
@@ -9,7 +9,7 @@ Using Axios' own public API, build a mobile view that lists the latest 20 storie
 
 ## Getting started
 1. Fork this repo to begin the exercise.
-2. Use React Native and rebuild the mocks in the PDF wireframe in CSS and JS.
+2. Use React Native and rebuild the mocks in the PDF wireframe (`assets/wireframe.pdf`).
 3. First make a call to the stream endpoint to retrieve an array of the 20 lastest story ids for Axios.com.
 4. For each story id, make another call to the content endpoint to retrieve the data for each story.
 5. For each story in the listicle view, display the following:
