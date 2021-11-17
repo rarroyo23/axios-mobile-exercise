@@ -39,7 +39,7 @@ https://api.axios.com/api/render/content/c13dbda5-893d-46ba-ae6a-87ff8e34c74e
 This returns the content and detail of one story, from its UUID.
 
 ## Suggestions
-We prefer tend to prefer functional components over classes, and hooks where necessary.
+We tend to prefer functional components over classes, and hooks where necessary.
 
 You can use any data fetching library you like. Fetch, Axios (heh) or SWR will all do just fine.
 
