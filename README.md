@@ -13,15 +13,15 @@ Using Axios' own public API, build a mobile view that lists the latest 20 storie
 3. First make a call to the stream endpoint to retrieve an array of the 20 lastest story ids for Axios.com.
 4. For each story id, make another call to the content endpoint to retrieve the data for each story.
 5. For each story in the list view, display the following:
-- The headline of the story.
-- The primary_image of the story.
+- The `headline` of the story.
+- The `primary_image` of the story.
 6. For each list item, link to a separate view that shows the full story and display the following:
-- The headline of the story.
-- The display name of the author.
-- The section label of the story.
-- The primary_image of the story.
-- The published date of the story.
-- The body text of the story.
+- The `headline` of the story.
+- The `display name` of the author.
+- The `section label` of the story.
+- The `primary_image` of the story.
+- The `published date` of the story.
+- The `body text` of the story.
 Bonus:
 - Link out to Axios.com from the story view.
 - Link back to the listicle view from the full story view.
