@@ -92,3 +92,7 @@ iOSInjectionProject/
 
 .vscode/
 node_modules/
+ios/output/
+android/.gradle/
+android/.idea/
+android/local.properties
