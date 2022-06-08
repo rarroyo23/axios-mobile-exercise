@@ -5,7 +5,3 @@ Tests:
 Assessibility: 
 Still had to refine some of the assessibility to make sure the user knows if its a header etc...
 
-DraftJS body: 
-I don't know too much about Draft.js. So still needed to parse the draft js object. Right now I am just returning the plain text. 
-But I would had done some more research on the structure of the blocks of the draft.js to be able to come up with a data structure 
-to manipulate the strings at given offsets and stylings. 
