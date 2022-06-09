@@ -1,5 +1,5 @@
 import React from 'react';
-import { ViewStyle, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { RawDraftContentBlock } from 'draft-js';
 import getRNDraftJSBlocks from 'react-native-draftjs-render';
 
