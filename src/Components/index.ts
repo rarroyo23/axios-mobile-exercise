@@ -8,3 +8,5 @@ export { default as StoriesListItem } from './StoriesListItem';
 export * from './StoriesListItem';
 export { default as Icon } from './Icon';
 export * from './Icon';
+export { default as DraftJsRenderer } from './DraftJsRenderer';
+export * from './DraftJsRenderer';
