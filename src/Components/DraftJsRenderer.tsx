@@ -49,20 +49,21 @@ const drafJsContentStyle = StyleSheet.flatten({
     flex: 1,
   },
   orderedListContainer: {
-    marginBottom: 16,
+    marginBottom: 18,
   },
   orderedListItemNumber: {
     fontSize: 14,
-    lineHeight: 32,
+    lineHeight: 21,
     marginRight: 11,
     alignSelf: 'flex-start',
-    color: '#c4170c',
+    color: 'black',
   },
   'ordered-list-item': {
     alignSelf: 'flex-start',
     fontSize: 14,
-    lineHeight: 32,
+    lineHeight: 21,
     flex: 1,
+    marginBottom: 10,
   },
   'code-block': {
     backgroundColor: '#e2e2e2',
