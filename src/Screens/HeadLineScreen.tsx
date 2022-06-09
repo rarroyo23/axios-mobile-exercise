@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   headedLineText: {
     fontSize: 24,
-    marginBottom: 5,
+    marginBottom: 10,
     fontWeight: 'bold',
     marginTop: 10,
   },
