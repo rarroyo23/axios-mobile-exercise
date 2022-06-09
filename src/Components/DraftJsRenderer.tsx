@@ -6,7 +6,7 @@ import getRNDraftJSBlocks from 'react-native-draftjs-render';
 export type DraftJsRendererProps = {
   /** Param to set the draft js content */
   contentState: RawDraftContentBlock;
-} & ViewStyle;
+};
 
 /** Common component to render the draft-js block object */
 const DraftJsRenderer: React.FC<DraftJsRendererProps> = ({ contentState }) => {
