@@ -1,6 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { FC, useCallback } from 'react';
-import { View, Text, Linking, StyleSheet } from 'react-native';
+import { View, Text, Linking, StyleSheet, ViewStyle } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -16,10 +16,17 @@ const HeadLineScreen: FC<HeadLineScreenProps> = ({ navigation, route }) => {
 
   const datePublished = new Date(storyData.published_date);
 
-  const scrollViewStyle = {
+  const scrollViewStyle: ViewStyle = {
     paddingRight: insets.right,
     paddingLeft: insets.left,
+  };
+
+  const bottomButtonSection: ViewStyle = {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginBottom: insets.bottom,
+    marginTop: 15,
+    marginHorizontal: 24,
   };
 
   const onPressBack = () => {
@@ -41,56 +48,58 @@ const HeadLineScreen: FC<HeadLineScreenProps> = ({ navigation, route }) => {
   const topic = storyData.topics[0]?.name;
 
   return (
-    <ScrollView style={scrollViewStyle} scrollIndicatorInsets={{ right: 1 }}>
-      <View style={styles.mainContainer}>
-        <View style={styles.authorsSection} accessible={true}>
-          <AccessibleImage
-            imageUrl={storyData.byline_photo}
-            height={45}
-            width={45}
-            borderRadius={25}
-            marginRight={10}
-          />
-          <View style={styles.authorAndDateContainer}>
-            <Text style={styles.authorsNAmeText}>{authorName}</Text>
-            <Text style={styles.datePublishedText}>
-              {datePublished.toDateString()}
-            </Text>
+    <>
+      <ScrollView style={scrollViewStyle} scrollIndicatorInsets={{ right: 1 }}>
+        <View style={styles.mainContainer}>
+          <View style={styles.authorsSection} accessible={true}>
+            <AccessibleImage
+              imageUrl={storyData.byline_photo}
+              height={45}
+              width={45}
+              borderRadius={25}
+              marginRight={10}
+            />
+            <View style={styles.authorAndDateContainer}>
+              <Text style={styles.authorsNAmeText}>{authorName}</Text>
+              <Text style={styles.datePublishedText}>
+                {datePublished.toDateString()}
+              </Text>
+            </View>
           </View>
-        </View>
 
-        <Text style={styles.headedLineText} accessibilityRole={'header'}>
-          {storyData.headline}
-        </Text>
+          <Text style={styles.headedLineText} accessibilityRole={'header'}>
+            {storyData.headline}
+          </Text>
 
-        {!!topic && <Text style={styles.topicText}>{topic}</Text>}
+          {!!topic && <Text style={styles.topicText}>{topic}</Text>}
 
-        <View>
-          <AccessibleImage
-            imageUrl={storyData.primary_image?.base_image_url}
-            height={200}
-            width={'100%'}
-            marginBottom={15}
-            iconHeight={150}
-            iconWidth={150}
-            altText={storyData.primary_image?.alt_text}
-          />
+          <View>
+            <AccessibleImage
+              imageUrl={storyData.primary_image?.base_image_url}
+              height={200}
+              width={'100%'}
+              marginBottom={15}
+              iconHeight={150}
+              iconWidth={150}
+              altText={storyData.primary_image?.alt_text}
+            />
+          </View>
+          <DraftJsRenderer contentState={storyData.blocks} />
         </View>
-        <DraftJsRenderer contentState={storyData.blocks} />
-        <View style={styles.bottomButtonSection}>
-          <IconButton
-            iconName="RouteIcon"
-            onPress={onAxiosLinkPress}
-            buttonText={'Axios.com'}
-          />
-          <IconButton
-            iconName="BackArrow"
-            onPress={onPressBack}
-            buttonText={'Back'}
-          />
-        </View>
+      </ScrollView>
+      <View style={bottomButtonSection}>
+        <IconButton
+          iconName="RouteIcon"
+          onPress={onAxiosLinkPress}
+          buttonText={'Axios.com'}
+        />
+        <IconButton
+          iconName="BackArrow"
+          onPress={onPressBack}
+          buttonText={'Back'}
+        />
       </View>
-    </ScrollView>
+    </>
   );
 };
 
@@ -127,12 +136,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontSize: 11,
   },
-  bottomButtonSection: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginHorizontal: 10,
-    marginBottom: 10,
-  },
+
   topicText: {
     marginBottom: 10,
     fontSize: 12,

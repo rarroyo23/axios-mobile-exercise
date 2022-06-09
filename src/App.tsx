@@ -8,6 +8,7 @@ import { enableScreens } from 'react-native-screens';
 import {
   createStackNavigator,
   StackNavigationOptions,
+  TransitionPresets,
 } from '@react-navigation/stack';
 
 import StoriesScreen from './Screens/StoriesScreen';
@@ -28,6 +29,8 @@ const RootNavStack = createStackNavigator<RootNavStackParamList>();
 
 const AppRoutes: React.FC = () => {
   const headerStyles: StackNavigationOptions = {
+    ...TransitionPresets.SlideFromRightIOS,
+    headerMode: 'float',
     headerStyle: {
       borderBottomColor: 'black',
       borderBottomWidth: 1,
